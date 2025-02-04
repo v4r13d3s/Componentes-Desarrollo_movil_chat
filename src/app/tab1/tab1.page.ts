@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tab1',
@@ -6,8 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss'],
   standalone: false,
 })
-export class Tab1Page {
+export class Tab1Page implements OnInit{
+
+  chats: any[] = [
+  {
+    username: "Oscar",
+    message: "Profesor, ya terminamos la tarea",
+    date: "3:52",
+    avatarUrl: "https://ionicframework.com/docs/img/demos/avatar.svg"
+  },
+  {
+    username: "Jhonatan",
+    message: "Maestro, ya llegamos al salón",
+    date: "4:12",
+    avatarUrl: "https://ionicframework.com/docs/img/demos/avatar.svg"
+  }
+    
+  ]
 
   constructor() {}
+
+  ngOnInit() {
+      
+  }
 
 }
